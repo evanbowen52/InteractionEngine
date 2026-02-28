@@ -92,6 +92,19 @@ GAMBIT_DEFINITIONS: dict[str, str] = {
     "Challenge": "A direct hit to status or autonomy.",
 }
 
+# Gambit → type for tree viz (Structuralist, Relationalist, Assertive)
+GAMBIT_TYPES: dict[str, str] = {
+    "Tether": "Relationalist",
+    "Shield": "Assertive",
+    "Gavel": "Assertive",
+    "Tool": "Structuralist",
+    "Blueprint": "Structuralist",
+    "Gift": "Relationalist",
+    "Mirror": "Relationalist",
+    "Probe": "Structuralist",
+    "Challenge": "Assertive",
+}
+
 # ---------------------------------------------------------------------------
 # 3. NARRATIVE FLAVORS (signature pairings + band descriptions)
 # ---------------------------------------------------------------------------

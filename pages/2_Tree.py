@@ -1,13 +1,20 @@
 """
 Tree page: Predictive Logic tree (Need → Worldview → Gambit).
-67 terminal paths, color-coded by Gambit type.
+All 9 gambits per worldview; darker = more likely. Click for descriptions & friction.
 """
 
 import json
 from pathlib import Path
 
 import streamlit as st
+from streamlit_plotly_events import plotly_events
 
+from interaction_engine import (
+    GAMBITS,
+    FRICTION_MATRIX,
+    NEED_DEFINITIONS,
+    WORLDVIEW_DEFINITIONS,
+)
 from ui_components import build_predictive_tree_figure
 
 st.set_page_config(
@@ -53,14 +60,59 @@ with col3:
     st.markdown("**Assertive** — hot/high-friction (Reds)")
 with col4:
     chart_type = st.radio("Chart", ["Sunburst", "Icicle"], horizontal=True)
+st.caption("Darker = more likely for that worldview. Click any segment.")
 
 st.divider()
 
 # ---------------------------------------------------------------------------
-# Plotly Sunburst / Icicle
+# Plotly Sunburst / Icicle (clickable via streamlit-plotly-events)
 # ---------------------------------------------------------------------------
-fig = build_predictive_tree_figure(tree_data, chart_type.lower())
-st.plotly_chart(fig, use_container_width=True)
+fig, customdata = build_predictive_tree_figure(tree_data, chart_type.lower())
+selected_points = plotly_events(
+    fig,
+    click_event=True,
+    select_event=False,
+    override_height=600,
+    key="tree_click",
+)
+
+# ---------------------------------------------------------------------------
+# Selected Need / Worldview description + Gambit friction row
+# ---------------------------------------------------------------------------
+need, worldview, gambit = None, None, None
+if selected_points and len(selected_points) > 0:
+    pt = selected_points[0]
+    idx = pt.get("pointIndex", pt.get("pointNumber", -1))
+    if 0 <= idx < len(customdata):
+        cd = customdata[idx]
+        if isinstance(cd, (list, tuple)) and len(cd) >= 3:
+            need, worldview, gambit = cd[0], cd[1], cd[2]
+
+if need or worldview or gambit:
+    st.divider()
+    st.subheader("Selection")
+
+    # Need + Worldview descriptions
+    if need:
+        st.markdown(f"**{need}** (Need)")
+        st.caption(NEED_DEFINITIONS.get(need, ""))
+    if worldview:
+        st.markdown(f"**{worldview}** (Worldview)")
+        st.caption(WORLDVIEW_DEFINITIONS.get(worldview, ""))
+
+    # Gambit: friction row (A's gambit → B's responses)
+    if gambit and gambit in FRICTION_MATRIX:
+        st.markdown(f"**{gambit}** (Gambit) — Friction when B responds with each gambit:")
+        row = FRICTION_MATRIX[gambit]
+        cols = st.columns(len(GAMBITS))
+        for i, gb in enumerate(GAMBITS):
+            with cols[i]:
+                score = row.get(gb, "—")
+                st.metric(gb, score)
+else:
+    st.caption("Click a segment above to see Need/Worldview descriptions, or click a Gambit for friction values.")
+
+st.divider()
 
 # ---------------------------------------------------------------------------
 # Expandable tree (fallback / detail view)
