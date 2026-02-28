@@ -3,6 +3,8 @@ Streamlit UI for the Interaction Engine.
 Run with: streamlit run app.py
 """
 
+from pathlib import Path
+
 import streamlit as st
 
 from interaction_engine import (
@@ -26,14 +28,30 @@ st.set_page_config(
     layout="wide",
 )
 
+# Inject custom CSS (Streamlit does not auto-load .streamlit/style.css)
+_css_dir = Path(__file__).resolve().parent
+_css_path = _css_dir / ".streamlit" / "style.css"
+if not _css_path.exists():
+    _css_path = _css_dir.parent / ".streamlit" / "style.css"
+if _css_path.exists():
+    st.markdown(f"<style>{_css_path.read_text()}</style>", unsafe_allow_html=True)
+
 st.title("Interaction Engine")
 st.caption("Periodic Table of Interaction · 64 Friction Matrix · Rule of Three")
 
 # ---------------------------------------------------------------------------
-# Sidebar: Rule of Three reference + definitions
+# Sidebar: Compact mode + footer
 # ---------------------------------------------------------------------------
 with st.sidebar:
-    st.header("Rule of Three")
+    st.checkbox("Compact mode", value=False, key="compact_mode")
+    st.divider()
+    st.caption("Run: `streamlit run app.py`")
+
+# ---------------------------------------------------------------------------
+# Rule of Three reference (main area, expander)
+# ---------------------------------------------------------------------------
+expanded_default = not st.session_state.compact_mode
+with st.expander("Rule of Three Reference", expanded=expanded_default):
     need = st.selectbox("Need → Worldviews", PRIMARY_NEEDS, key="ref_need")
     st.write("Likely worldviews:", ", ".join(NEED_TO_WORLDVIEWS[need]))
     st.caption(NEED_DEFINITIONS[need])
@@ -81,11 +99,10 @@ st.info(flavor)
 st.subheader("81 Friction Matrix")
 st.caption("Rows = A's Gambit, Columns = B's Response. Current pair highlighted.")
 
-fig = build_friction_matrix_figure(highlight_gambit_a=gambit_a, highlight_gambit_b=gambit_b)
+compact = st.session_state.get("compact_mode", False)
+fig = build_friction_matrix_figure(
+    highlight_gambit_a=gambit_a,
+    highlight_gambit_b=gambit_b,
+    compact=compact,
+)
 st.plotly_chart(fig, use_container_width=True)
-
-# ---------------------------------------------------------------------------
-# How to run (footer)
-# ---------------------------------------------------------------------------
-st.sidebar.divider()
-st.sidebar.caption("Run: `streamlit run app.py`")

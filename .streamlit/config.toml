@@ -1,0 +1,10 @@
+# Streamlit configuration
+# Custom CSS goes in .streamlit/style.css
+
+[browser]
+serverAddress = "localhost"
+serverPort = 8501
+
+[client]
+showErrorDetails = "full"
+toolbarMode = "auto"

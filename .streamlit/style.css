@@ -1,0 +1,21 @@
+/* Mobile-first overrides for max-width: 768px */
+
+@media (max-width: 768px) {
+  /* Stack Streamlit columns vertically */
+  [data-testid="column"] {
+    min-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Reduce main block padding for mobile */
+  .main .block-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+
+  /* Tables: horizontal scroll on narrow screens */
+  [data-testid="stTable"] {
+    overflow-x: auto;
+  }
+}

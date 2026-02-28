@@ -1,0 +1,212 @@
+{
+  "name": "The Human",
+  "children": [
+    {
+      "name": "Safety",
+      "children": [
+        {
+          "name": "Survival",
+          "children": [
+            {"name": "Tether", "type": "Relationalist"},
+            {"name": "Shield", "type": "Assertive"},
+            {"name": "Probe", "type": "Structuralist"}
+          ]
+        },
+        {
+          "name": "Deficiency",
+          "children": [
+            {"name": "Tether", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        },
+        {
+          "name": "Operational",
+          "children": [
+            {"name": "Tool", "type": "Structuralist"},
+            {"name": "Blueprint", "type": "Structuralist"},
+            {"name": "Probe", "type": "Structuralist"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Autonomy",
+      "children": [
+        {
+          "name": "Identity",
+          "children": [
+            {"name": "Gavel", "type": "Assertive"},
+            {"name": "Challenge", "type": "Assertive"},
+            {"name": "Probe", "type": "Structuralist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        },
+        {
+          "name": "Operational",
+          "children": [
+            {"name": "Tool", "type": "Structuralist"},
+            {"name": "Blueprint", "type": "Structuralist"},
+            {"name": "Probe", "type": "Structuralist"}
+          ]
+        },
+        {
+          "name": "Ludenic",
+          "children": [
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Probe", "type": "Structuralist"},
+            {"name": "Mirror", "type": "Relationalist"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Competence",
+      "children": [
+        {
+          "name": "Operational",
+          "children": [
+            {"name": "Tool", "type": "Structuralist"},
+            {"name": "Blueprint", "type": "Structuralist"},
+            {"name": "Probe", "type": "Structuralist"}
+          ]
+        },
+        {
+          "name": "Identity",
+          "children": [
+            {"name": "Gavel", "type": "Assertive"},
+            {"name": "Challenge", "type": "Assertive"},
+            {"name": "Probe", "type": "Structuralist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        },
+        {
+          "name": "Unity",
+          "children": [
+            {"name": "Mirror", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Tether", "type": "Relationalist"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Significance",
+      "children": [
+        {
+          "name": "Identity",
+          "children": [
+            {"name": "Gavel", "type": "Assertive"},
+            {"name": "Challenge", "type": "Assertive"},
+            {"name": "Probe", "type": "Structuralist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        },
+        {
+          "name": "Deficiency",
+          "children": [
+            {"name": "Tether", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        },
+        {
+          "name": "Sacred",
+          "children": [
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Mirror", "type": "Relationalist"},
+            {"name": "Tether", "type": "Relationalist"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "children": [
+        {
+          "name": "Operational",
+          "children": [
+            {"name": "Tool", "type": "Structuralist"},
+            {"name": "Blueprint", "type": "Structuralist"},
+            {"name": "Probe", "type": "Structuralist"}
+          ]
+        },
+        {
+          "name": "Survival",
+          "children": [
+            {"name": "Tether", "type": "Relationalist"},
+            {"name": "Shield", "type": "Assertive"},
+            {"name": "Probe", "type": "Structuralist"}
+          ]
+        },
+        {
+          "name": "Unity",
+          "children": [
+            {"name": "Mirror", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Tether", "type": "Relationalist"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Belonging",
+      "children": [
+        {
+          "name": "Unity",
+          "children": [
+            {"name": "Mirror", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Tether", "type": "Relationalist"}
+          ]
+        },
+        {
+          "name": "Deficiency",
+          "children": [
+            {"name": "Tether", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        },
+        {
+          "name": "Ludenic",
+          "children": [
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Probe", "type": "Structuralist"},
+            {"name": "Mirror", "type": "Relationalist"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Meaning",
+      "children": [
+        {
+          "name": "Sacred",
+          "children": [
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Mirror", "type": "Relationalist"},
+            {"name": "Tether", "type": "Relationalist"}
+          ]
+        },
+        {
+          "name": "Unity",
+          "children": [
+            {"name": "Mirror", "type": "Relationalist"},
+            {"name": "Gift", "type": "Relationalist"},
+            {"name": "Tether", "type": "Relationalist"}
+          ]
+        },
+        {
+          "name": "Identity",
+          "children": [
+            {"name": "Gavel", "type": "Assertive"},
+            {"name": "Challenge", "type": "Assertive"},
+            {"name": "Probe", "type": "Structuralist"},
+            {"name": "Shield", "type": "Assertive"}
+          ]
+        }
+      ]
+    }
+  ]
+}
