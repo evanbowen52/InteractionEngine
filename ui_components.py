@@ -4,7 +4,15 @@ import copy
 
 import plotly.graph_objects as go
 
-from interaction_engine import GAMBITS, FRICTION_MATRIX, GAMBIT_TYPES, WORLDVIEW_TO_GAMBITS
+from interaction_engine import (
+    GAMBITS, 
+    FRICTION_MATRIX, 
+    GAMBIT_TYPES, 
+    WORLDVIEW_TO_GAMBITS,
+    NEED_DEFINITIONS,
+    WORLDVIEW_DEFINITIONS,
+    GAMBIT_DEFINITIONS,
+)
 
 # Gambit type colors for tree viz: Structuralist, Relationalist, Assertive
 TYPE_COLORS = {
@@ -117,6 +125,7 @@ def _flatten_tree(
     parents: list,
     colors: list,
     customdata: list,
+    hovertext: list,
 ) -> None:
     """Recursively flatten tree into Plotly Sunburst/Icicle format."""
     name = node.get("name", "?")
@@ -137,14 +146,33 @@ def _flatten_tree(
     else:
         color = base_color
 
+    # Determine definition for hover tooltip based on level
+    definition = ""
+    status = ""
+    if name in NEED_DEFINITIONS:
+        definition = NEED_DEFINITIONS[name]
+    elif name in WORLDVIEW_DEFINITIONS:
+        definition = WORLDVIEW_DEFINITIONS[name]
+    elif name in GAMBIT_DEFINITIONS:
+        definition = GAMBIT_DEFINITIONS[name]
+        from interaction_engine import GAMBIT_METADATA
+        meta = GAMBIT_METADATA.get(name, {})
+        if meta.get("status_delta"):
+            status = f"<br><i>Status Delta: {meta['status_delta']}</i>"
+    elif name == "The Human":
+        definition = "The root of all behavior."
+        
+    hover_str = f"<b>{name}</b><br>{definition}{status}" if definition else name
+
     ids.append(node_id)
     labels.append(name)
     parents.append(parent_id)
     colors.append(color)
     customdata.append([need, worldview, gambit])
+    hovertext.append(hover_str)
 
     for child in children:
-        _flatten_tree(child, node_id, path + [child.get("name", "?")], ids, labels, parents, colors, customdata)
+        _flatten_tree(child, node_id, path + [child.get("name", "?")], ids, labels, parents, colors, customdata, hovertext)
 
 
 def build_predictive_tree_figure(
@@ -155,9 +183,9 @@ def build_predictive_tree_figure(
     When expand_all_gambits=True, each worldview shows all 9 gambits (likely ones full color, others dimmed).
     """
     tree = expand_tree_for_viz(tree_data) if expand_all_gambits else tree_data
-    ids, labels, parents, colors, customdata = [], [], [], [], []
+    ids, labels, parents, colors, customdata, hovertext = [], [], [], [], [], []
     root_name = tree.get("name", "Root")
-    _flatten_tree(tree, "", [root_name], ids, labels, parents, colors, customdata)
+    _flatten_tree(tree, "", [root_name], ids, labels, parents, colors, customdata, hovertext)
 
     if chart_type == "icicle":
         trace = go.Icicle(
@@ -166,6 +194,8 @@ def build_predictive_tree_figure(
             parents=parents,
             marker=dict(colors=colors),
             customdata=customdata,
+            hovertext=hovertext,
+            hovertemplate="%{hovertext}<extra></extra>",
         )
     else:
         trace = go.Sunburst(
@@ -174,6 +204,8 @@ def build_predictive_tree_figure(
             parents=parents,
             marker=dict(colors=colors),
             customdata=customdata,
+            hovertext=hovertext,
+            hovertemplate="%{hovertext}<extra></extra>",
         )
 
     fig = go.Figure(trace)

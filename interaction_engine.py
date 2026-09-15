@@ -1,9 +1,52 @@
 """
 Person-N Interaction Simulator
-Based on the 'Periodic Table of Interaction' and 64-cell Friction Matrix.
+Based on the 'Periodic Table of Interaction' and 81-cell Friction Matrix.
 """
 
+import json
 from dataclasses import dataclass
+from pathlib import Path
+
+# Load tree data dynamically to extract definitions
+_tree_path = Path(__file__).resolve().parent / "data" / "tree.json"
+with open(_tree_path, encoding="utf-8") as _f:
+    TREE_DATA = json.load(_f)
+
+# ---------------------------------------------------------------------------
+# Dynamic Extraction (SSOT)
+# ---------------------------------------------------------------------------
+NEED_DEFINITIONS: dict[str, str] = {}
+WORLDVIEW_DEFINITIONS: dict[str, str] = {}
+GAMBIT_METADATA: dict[str, dict] = {}
+
+def _parse_tree(node, level=0):
+    name = node.get("name")
+    
+    if level == 1 and "definition" in node:
+        NEED_DEFINITIONS[name] = node["definition"]
+        
+    if level == 2 and "definition" in node:
+        WORLDVIEW_DEFINITIONS[name] = node["definition"]
+        
+    if level == 3 and "definition" in node:
+        if name not in GAMBIT_METADATA:
+            GAMBIT_METADATA[name] = {
+                "definition": node["definition"],
+                "status_delta": node.get("status_delta", ""),
+                "structural_impact": node.get("structural_impact", ""),
+                "sub_tactics": node.get("sub_tactics", [])
+            }
+            
+    if "children" in node:
+        for child in node["children"]:
+            _parse_tree(child, level + 1)
+
+_parse_tree(TREE_DATA)
+
+# Flatten gambit definitions for backwards compatibility in UI loops
+GAMBIT_DEFINITIONS: dict[str, str] = {
+    name: data["definition"] for name, data in GAMBIT_METADATA.items()
+}
 
 # ---------------------------------------------------------------------------
 # 1. THE 81 FRICTION MATRIX (A's Gambit → B's Response → Score)
@@ -59,37 +102,6 @@ WORLDVIEW_TO_GAMBITS: dict[str, tuple[str, ...]] = {
     "Unity":      ("Mirror", "Gift", "Tether"),
     "Ludenic":    ("Gift", "Probe", "Mirror"),
     "Sacred":     ("Gift", "Mirror", "Tether"),
-}
-
-# Definitions (from SYSTEM_DEFINITION.md) for UI reference
-NEED_DEFINITIONS: dict[str, str] = {
-    "Safety": "Physical security or psychological \"face\" saving.",
-    "Autonomy": "The need for choice; avoiding being \"done to.\"",
-    "Competence": "The need to feel capable/effective.",
-    "Significance": "To be seen, to have status, to matter.",
-    "Order": "To reduce entropy; predictability.",
-    "Belonging": "Acceptance without performance.",
-    "Meaning": "Purpose, justice, or \"righting the scales.\"",
-}
-WORLDVIEW_DEFINITIONS: dict[str, str] = {
-    "Survival": "The world is a threat (High Cortisol).",
-    "Deficiency": "The world is a desert (Not enough love/time/resource).",
-    "Identity": "The world is a ladder/courtroom (Status/Who is right?).",
-    "Operational": "The world is a machine (Tools/Logistics).",
-    "Unity": "The world is a shared garden (Collaboration/Flow).",
-    "Ludenic": "The world is a playground (Play/Low-stakes).",
-    "Sacred": "The world is a temple (Awe/Grief/Birth).",
-}
-GAMBIT_DEFINITIONS: dict[str, str] = {
-    "Tether": "A reach for grounding/reassurance.",
-    "Shield": "Deflecting or setting a boundary.",
-    "Gavel": "Passing judgment or declaring \"Truth.\"",
-    "Tool": "Providing data or proposing structure.",
-    "Blueprint": "Providing data or proposing structure (systematic).",
-    "Gift": "Vulnerability, wit, or insight.",
-    "Mirror": "Reflecting the other's state/validation.",
-    "Probe": "Questioning to test a model.",
-    "Challenge": "A direct hit to status or autonomy.",
 }
 
 # Gambit → type for tree viz (Structuralist, Relationalist, Assertive)

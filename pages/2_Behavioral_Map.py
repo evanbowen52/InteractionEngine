@@ -48,26 +48,24 @@ with open(_tree_path, encoding="utf-8") as f:
     tree_data = json.load(f)
 
 # ---------------------------------------------------------------------------
-# Legend + chart type
+# Legend
 # ---------------------------------------------------------------------------
 st.subheader("Gambit types")
-col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     st.markdown("**Structuralist** — cold/logic (Blues)")
 with col2:
     st.markdown("**Relationalist** — warm/connection (Greens)")
 with col3:
     st.markdown("**Assertive** — hot/high-friction (Reds)")
-with col4:
-    chart_type = st.radio("Chart", ["Sunburst", "Icicle"], horizontal=True)
 st.caption("Darker = more likely for that worldview. Click any segment.")
 
 st.divider()
 
 # ---------------------------------------------------------------------------
-# Plotly Sunburst / Icicle (clickable via streamlit-plotly-events)
+# Plotly Sunburst (clickable via streamlit-plotly-events)
 # ---------------------------------------------------------------------------
-fig, customdata = build_predictive_tree_figure(tree_data, chart_type.lower())
+fig, customdata = build_predictive_tree_figure(tree_data, "sunburst")
 selected_points = plotly_events(
     fig,
     click_event=True,

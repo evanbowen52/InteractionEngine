@@ -7,28 +7,208 @@
         {
           "name": "Survival",
           "children": [
-            {"name": "Tether", "type": "Relationalist"},
-            {"name": "Shield", "type": "Assertive"},
-            {"name": "Probe", "type": "Structuralist"}
-          ]
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a threat (High Cortisol)."
         },
         {
           "name": "Deficiency",
           "children": [
-            {"name": "Tether", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a desert (Not enough love/time/resource)."
         },
         {
           "name": "Operational",
           "children": [
-            {"name": "Tool", "type": "Structuralist"},
-            {"name": "Blueprint", "type": "Structuralist"},
-            {"name": "Probe", "type": "Structuralist"}
-          ]
+            {
+              "name": "Tool",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure.",
+              "status_delta": "0",
+              "structural_impact": "Neutral / Structuring",
+              "sub_tactics": []
+            },
+            {
+              "name": "Blueprint",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure (systematic).",
+              "status_delta": "+1",
+              "structural_impact": "Structuring / Authority-Claiming",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a machine (Tools/Logistics)."
         }
-      ]
+      ],
+      "definition": "Physical security or psychological \"face\" saving."
     },
     {
       "name": "Autonomy",
@@ -36,29 +216,238 @@
         {
           "name": "Identity",
           "children": [
-            {"name": "Gavel", "type": "Assertive"},
-            {"name": "Challenge", "type": "Assertive"},
-            {"name": "Probe", "type": "Structuralist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Gavel",
+              "type": "Assertive",
+              "definition": "Passing judgment or declaring \"Truth.\"",
+              "status_delta": "+2",
+              "structural_impact": "Disruptive / Turn-Ending",
+              "sub_tactics": [
+                {
+                  "token": "Overbear",
+                  "action": "Direct lexical or emotional crowding",
+                  "status_delta": "+2",
+                  "structural_impact": "Disruptive / Overlapping",
+                  "definition": "Flooding conversational space using volume, cadence, or repeated assertions to deny response bandwidth."
+                },
+                {
+                  "token": "Interruption",
+                  "action": "Floor seizure before completion",
+                  "status_delta": "+1",
+                  "structural_impact": "Fracturing / High-Velocity",
+                  "definition": "Cutting off the interlocutor's turn mid-clause to alter pace and assert dominance."
+                },
+                {
+                  "token": "Monologue",
+                  "action": "Extended floor monopolization",
+                  "status_delta": "+2",
+                  "structural_impact": "Isolating / Stalling",
+                  "definition": "Sustained discourse that locks out turn transitions, turning dialogue into performance."
+                }
+              ]
+            },
+            {
+              "name": "Challenge",
+              "type": "Assertive",
+              "definition": "A direct hit to status or autonomy.",
+              "status_delta": "+1",
+              "structural_impact": "Disruptive / Overlapping",
+              "sub_tactics": [
+                {
+                  "token": "Undermine",
+                  "action": "Subtle invalidation of competence or standing",
+                  "status_delta": "+1",
+                  "structural_impact": "Subversive / Continuous",
+                  "definition": "Eroding the other's status using faint praise, passive-aggressive doubt, or patronizing qualifiers."
+                },
+                {
+                  "token": "Topic Shift",
+                  "action": "Abrupt lane change",
+                  "status_delta": "+1",
+                  "structural_impact": "Disjointed / Re-orienting",
+                  "definition": "Abandoning the current thematic track entirely to disorient the interlocutor and dodge risk."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a ladder/courtroom (Status/Who is right?)."
         },
         {
           "name": "Operational",
           "children": [
-            {"name": "Tool", "type": "Structuralist"},
-            {"name": "Blueprint", "type": "Structuralist"},
-            {"name": "Probe", "type": "Structuralist"}
-          ]
+            {
+              "name": "Tool",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure.",
+              "status_delta": "0",
+              "structural_impact": "Neutral / Structuring",
+              "sub_tactics": []
+            },
+            {
+              "name": "Blueprint",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure (systematic).",
+              "status_delta": "+1",
+              "structural_impact": "Structuring / Authority-Claiming",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a machine (Tools/Logistics)."
         },
         {
           "name": "Ludenic",
           "children": [
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Probe", "type": "Structuralist"},
-            {"name": "Mirror", "type": "Relationalist"}
-          ]
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            },
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a playground (Play/Low-stakes)."
         }
-      ]
+      ],
+      "definition": "The need for choice; avoiding being \"done to.\""
     },
     {
       "name": "Competence",
@@ -66,29 +455,238 @@
         {
           "name": "Operational",
           "children": [
-            {"name": "Tool", "type": "Structuralist"},
-            {"name": "Blueprint", "type": "Structuralist"},
-            {"name": "Probe", "type": "Structuralist"}
-          ]
+            {
+              "name": "Tool",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure.",
+              "status_delta": "0",
+              "structural_impact": "Neutral / Structuring",
+              "sub_tactics": []
+            },
+            {
+              "name": "Blueprint",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure (systematic).",
+              "status_delta": "+1",
+              "structural_impact": "Structuring / Authority-Claiming",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a machine (Tools/Logistics)."
         },
         {
           "name": "Identity",
           "children": [
-            {"name": "Gavel", "type": "Assertive"},
-            {"name": "Challenge", "type": "Assertive"},
-            {"name": "Probe", "type": "Structuralist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Gavel",
+              "type": "Assertive",
+              "definition": "Passing judgment or declaring \"Truth.\"",
+              "status_delta": "+2",
+              "structural_impact": "Disruptive / Turn-Ending",
+              "sub_tactics": [
+                {
+                  "token": "Overbear",
+                  "action": "Direct lexical or emotional crowding",
+                  "status_delta": "+2",
+                  "structural_impact": "Disruptive / Overlapping",
+                  "definition": "Flooding conversational space using volume, cadence, or repeated assertions to deny response bandwidth."
+                },
+                {
+                  "token": "Interruption",
+                  "action": "Floor seizure before completion",
+                  "status_delta": "+1",
+                  "structural_impact": "Fracturing / High-Velocity",
+                  "definition": "Cutting off the interlocutor's turn mid-clause to alter pace and assert dominance."
+                },
+                {
+                  "token": "Monologue",
+                  "action": "Extended floor monopolization",
+                  "status_delta": "+2",
+                  "structural_impact": "Isolating / Stalling",
+                  "definition": "Sustained discourse that locks out turn transitions, turning dialogue into performance."
+                }
+              ]
+            },
+            {
+              "name": "Challenge",
+              "type": "Assertive",
+              "definition": "A direct hit to status or autonomy.",
+              "status_delta": "+1",
+              "structural_impact": "Disruptive / Overlapping",
+              "sub_tactics": [
+                {
+                  "token": "Undermine",
+                  "action": "Subtle invalidation of competence or standing",
+                  "status_delta": "+1",
+                  "structural_impact": "Subversive / Continuous",
+                  "definition": "Eroding the other's status using faint praise, passive-aggressive doubt, or patronizing qualifiers."
+                },
+                {
+                  "token": "Topic Shift",
+                  "action": "Abrupt lane change",
+                  "status_delta": "+1",
+                  "structural_impact": "Disjointed / Re-orienting",
+                  "definition": "Abandoning the current thematic track entirely to disorient the interlocutor and dodge risk."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a ladder/courtroom (Status/Who is right?)."
         },
         {
           "name": "Unity",
           "children": [
-            {"name": "Mirror", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Tether", "type": "Relationalist"}
-          ]
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a shared garden (Collaboration/Flow)."
         }
-      ]
+      ],
+      "definition": "The need to feel capable/effective."
     },
     {
       "name": "Significance",
@@ -96,29 +694,260 @@
         {
           "name": "Identity",
           "children": [
-            {"name": "Gavel", "type": "Assertive"},
-            {"name": "Challenge", "type": "Assertive"},
-            {"name": "Probe", "type": "Structuralist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Gavel",
+              "type": "Assertive",
+              "definition": "Passing judgment or declaring \"Truth.\"",
+              "status_delta": "+2",
+              "structural_impact": "Disruptive / Turn-Ending",
+              "sub_tactics": [
+                {
+                  "token": "Overbear",
+                  "action": "Direct lexical or emotional crowding",
+                  "status_delta": "+2",
+                  "structural_impact": "Disruptive / Overlapping",
+                  "definition": "Flooding conversational space using volume, cadence, or repeated assertions to deny response bandwidth."
+                },
+                {
+                  "token": "Interruption",
+                  "action": "Floor seizure before completion",
+                  "status_delta": "+1",
+                  "structural_impact": "Fracturing / High-Velocity",
+                  "definition": "Cutting off the interlocutor's turn mid-clause to alter pace and assert dominance."
+                },
+                {
+                  "token": "Monologue",
+                  "action": "Extended floor monopolization",
+                  "status_delta": "+2",
+                  "structural_impact": "Isolating / Stalling",
+                  "definition": "Sustained discourse that locks out turn transitions, turning dialogue into performance."
+                }
+              ]
+            },
+            {
+              "name": "Challenge",
+              "type": "Assertive",
+              "definition": "A direct hit to status or autonomy.",
+              "status_delta": "+1",
+              "structural_impact": "Disruptive / Overlapping",
+              "sub_tactics": [
+                {
+                  "token": "Undermine",
+                  "action": "Subtle invalidation of competence or standing",
+                  "status_delta": "+1",
+                  "structural_impact": "Subversive / Continuous",
+                  "definition": "Eroding the other's status using faint praise, passive-aggressive doubt, or patronizing qualifiers."
+                },
+                {
+                  "token": "Topic Shift",
+                  "action": "Abrupt lane change",
+                  "status_delta": "+1",
+                  "structural_impact": "Disjointed / Re-orienting",
+                  "definition": "Abandoning the current thematic track entirely to disorient the interlocutor and dodge risk."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a ladder/courtroom (Status/Who is right?)."
         },
         {
           "name": "Deficiency",
           "children": [
-            {"name": "Tether", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a desert (Not enough love/time/resource)."
         },
         {
           "name": "Sacred",
           "children": [
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Mirror", "type": "Relationalist"},
-            {"name": "Tether", "type": "Relationalist"}
-          ]
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            },
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a temple (Awe/Grief/Birth)."
         }
-      ]
+      ],
+      "definition": "To be seen, to have status, to matter."
     },
     {
       "name": "Order",
@@ -126,28 +955,208 @@
         {
           "name": "Operational",
           "children": [
-            {"name": "Tool", "type": "Structuralist"},
-            {"name": "Blueprint", "type": "Structuralist"},
-            {"name": "Probe", "type": "Structuralist"}
-          ]
+            {
+              "name": "Tool",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure.",
+              "status_delta": "0",
+              "structural_impact": "Neutral / Structuring",
+              "sub_tactics": []
+            },
+            {
+              "name": "Blueprint",
+              "type": "Structuralist",
+              "definition": "Providing data or proposing structure (systematic).",
+              "status_delta": "+1",
+              "structural_impact": "Structuring / Authority-Claiming",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a machine (Tools/Logistics)."
         },
         {
           "name": "Survival",
           "children": [
-            {"name": "Tether", "type": "Relationalist"},
-            {"name": "Shield", "type": "Assertive"},
-            {"name": "Probe", "type": "Structuralist"}
-          ]
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a threat (High Cortisol)."
         },
         {
           "name": "Unity",
           "children": [
-            {"name": "Mirror", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Tether", "type": "Relationalist"}
-          ]
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a shared garden (Collaboration/Flow)."
         }
-      ]
+      ],
+      "definition": "To reduce entropy; predictability."
     },
     {
       "name": "Belonging",
@@ -155,28 +1164,230 @@
         {
           "name": "Unity",
           "children": [
-            {"name": "Mirror", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Tether", "type": "Relationalist"}
-          ]
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a shared garden (Collaboration/Flow)."
         },
         {
           "name": "Deficiency",
           "children": [
-            {"name": "Tether", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a desert (Not enough love/time/resource)."
         },
         {
           "name": "Ludenic",
           "children": [
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Probe", "type": "Structuralist"},
-            {"name": "Mirror", "type": "Relationalist"}
-          ]
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            },
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a playground (Play/Low-stakes)."
         }
-      ]
+      ],
+      "definition": "Acceptance without performance."
     },
     {
       "name": "Meaning",
@@ -184,29 +1395,260 @@
         {
           "name": "Sacred",
           "children": [
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Mirror", "type": "Relationalist"},
-            {"name": "Tether", "type": "Relationalist"}
-          ]
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            },
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a temple (Awe/Grief/Birth)."
         },
         {
           "name": "Unity",
           "children": [
-            {"name": "Mirror", "type": "Relationalist"},
-            {"name": "Gift", "type": "Relationalist"},
-            {"name": "Tether", "type": "Relationalist"}
-          ]
+            {
+              "name": "Mirror",
+              "type": "Relationalist",
+              "definition": "Reflecting the other's state/validation.",
+              "status_delta": "0",
+              "structural_impact": "Validating / Consolidating",
+              "sub_tactics": [
+                {
+                  "token": "Summary",
+                  "action": "Synthesizing prior turns",
+                  "status_delta": "+1",
+                  "structural_impact": "Consolidating / Transitioning",
+                  "definition": "Recapping the current status quo of the dialogue to force consensus before proceeding."
+                },
+                {
+                  "token": "False Close",
+                  "action": "Premature pseudo-resolution",
+                  "status_delta": "0",
+                  "structural_impact": "Suspending / Deceptive",
+                  "definition": "Signaling the conversation has concluded only to lure out a final, unguarded remark."
+                }
+              ]
+            },
+            {
+              "name": "Gift",
+              "type": "Relationalist",
+              "definition": "Vulnerability, wit, or insight.",
+              "status_delta": "-1",
+              "structural_impact": "De-escalatory / Connecting",
+              "sub_tactics": [
+                {
+                  "token": "Yield",
+                  "action": "Overt submissive compliance",
+                  "status_delta": "-2",
+                  "structural_impact": "De-escalatory / Conceding",
+                  "definition": "Surrendering territory, conceding ground, or adopting subservient phrasing to end conflict."
+                },
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                }
+              ]
+            },
+            {
+              "name": "Tether",
+              "type": "Relationalist",
+              "definition": "A reach for grounding/reassurance.",
+              "status_delta": "0",
+              "structural_impact": "Connecting / Turn-Passing",
+              "sub_tactics": [
+                {
+                  "token": "Bridge",
+                  "action": "Status concession inviting reciprocity",
+                  "status_delta": "-1",
+                  "structural_impact": "Connecting / Turn-Passing",
+                  "definition": "Extending a tactical vulnerability or question designed to pass the floor safely."
+                },
+                {
+                  "token": "Phatic Token",
+                  "action": "Channel check / minimal feedback",
+                  "status_delta": "0",
+                  "structural_impact": "Pacing / Passive-Holding",
+                  "definition": "Utterances ('right', 'uh-huh', 'look') used strictly to pace delivery or confirm contact."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a shared garden (Collaboration/Flow)."
         },
         {
           "name": "Identity",
           "children": [
-            {"name": "Gavel", "type": "Assertive"},
-            {"name": "Challenge", "type": "Assertive"},
-            {"name": "Probe", "type": "Structuralist"},
-            {"name": "Shield", "type": "Assertive"}
-          ]
+            {
+              "name": "Gavel",
+              "type": "Assertive",
+              "definition": "Passing judgment or declaring \"Truth.\"",
+              "status_delta": "+2",
+              "structural_impact": "Disruptive / Turn-Ending",
+              "sub_tactics": [
+                {
+                  "token": "Overbear",
+                  "action": "Direct lexical or emotional crowding",
+                  "status_delta": "+2",
+                  "structural_impact": "Disruptive / Overlapping",
+                  "definition": "Flooding conversational space using volume, cadence, or repeated assertions to deny response bandwidth."
+                },
+                {
+                  "token": "Interruption",
+                  "action": "Floor seizure before completion",
+                  "status_delta": "+1",
+                  "structural_impact": "Fracturing / High-Velocity",
+                  "definition": "Cutting off the interlocutor's turn mid-clause to alter pace and assert dominance."
+                },
+                {
+                  "token": "Monologue",
+                  "action": "Extended floor monopolization",
+                  "status_delta": "+2",
+                  "structural_impact": "Isolating / Stalling",
+                  "definition": "Sustained discourse that locks out turn transitions, turning dialogue into performance."
+                }
+              ]
+            },
+            {
+              "name": "Challenge",
+              "type": "Assertive",
+              "definition": "A direct hit to status or autonomy.",
+              "status_delta": "+1",
+              "structural_impact": "Disruptive / Overlapping",
+              "sub_tactics": [
+                {
+                  "token": "Undermine",
+                  "action": "Subtle invalidation of competence or standing",
+                  "status_delta": "+1",
+                  "structural_impact": "Subversive / Continuous",
+                  "definition": "Eroding the other's status using faint praise, passive-aggressive doubt, or patronizing qualifiers."
+                },
+                {
+                  "token": "Topic Shift",
+                  "action": "Abrupt lane change",
+                  "status_delta": "+1",
+                  "structural_impact": "Disjointed / Re-orienting",
+                  "definition": "Abandoning the current thematic track entirely to disorient the interlocutor and dodge risk."
+                }
+              ]
+            },
+            {
+              "name": "Probe",
+              "type": "Structuralist",
+              "definition": "Questioning to test a model.",
+              "status_delta": "0",
+              "structural_impact": "Turn-Mandating",
+              "sub_tactics": [
+                {
+                  "token": "Questioning",
+                  "action": "Inquiry demand",
+                  "status_delta": "0",
+                  "structural_impact": "Turn-Mandating",
+                  "definition": "Deploying open or closed queries to obligate a turn completion from the interlocutor."
+                },
+                {
+                  "token": "Bait",
+                  "action": "Feigned weakness or calculated provocation",
+                  "status_delta": "+1",
+                  "structural_impact": "Trap / Turn-Forcing",
+                  "definition": "Dangling an apparent vulnerability or provocative assertion to trick the interlocutor into an overreach."
+                }
+              ]
+            },
+            {
+              "name": "Shield",
+              "type": "Assertive",
+              "definition": "Deflecting or setting a boundary.",
+              "status_delta": "0",
+              "structural_impact": "Stabilizing / Turn-Holding",
+              "sub_tactics": [
+                {
+                  "token": "Deflect",
+                  "action": "Topic or focus redirection",
+                  "status_delta": "0",
+                  "structural_impact": "Pivot / Turn-Passing",
+                  "definition": "Shifting the conversational spotlight to a third-party fact, person, or abstraction to evade pressure."
+                },
+                {
+                  "token": "Minimize",
+                  "action": "Self-deprecation or scope reduction",
+                  "status_delta": "-1",
+                  "structural_impact": "Buffer / Disarming",
+                  "definition": "Downplaying one's own achievements or grievances to lower threat profile and reduce tension."
+                }
+              ]
+            }
+          ],
+          "definition": "The world is a ladder/courtroom (Status/Who is right?)."
         }
-      ]
+      ],
+      "definition": "Purpose, justice, or \"righting the scales.\""
     }
   ]
 }
