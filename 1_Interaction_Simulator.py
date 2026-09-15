@@ -41,58 +41,9 @@ st.title("Interaction Engine")
 st.caption("Select an initiating gambit and a response below to see the friction score of the interaction.")
 
 # ---------------------------------------------------------------------------
-# Dialog: About & Glossary
-# ---------------------------------------------------------------------------
-@st.dialog("About & Glossary", width="large")
-def about_glossary_dialog():
-    st.markdown("""
-    ### The Periodic Table of Interaction
-    This system predicts the narrative outcome of an interaction based on underlying psychological states. 
-    Every interaction is governed by a **Rule of Three**:
-    
-    1. **Primary Need (The Gravity):** The fundamental psychological driver. A character's core Need limits how they can perceive the situation.
-    2. **Worldview (The Filter):** The lens through which they view the world, heavily shaped by their Need.
-    3. **Gambit (The Throw):** The specific tactical move they execute based on their Worldview.
-    
-    When Person A throws a Gambit and Person B responds with their own Gambit, the resulting combination dictates the **Friction Score (0-10)** and the narrative outcome.
-    """)
-    
-    st.divider()
-    
-    tab1, tab2, tab3, tab4 = st.tabs(["Needs", "Worldviews", "Gambits", "Friction Scale"])
-    
-    with tab1:
-        for need, desc in NEED_DEFINITIONS.items():
-            st.markdown(f"**{need}**: {desc}")
-            
-    with tab2:
-        for wv, desc in WORLDVIEW_DEFINITIONS.items():
-            st.markdown(f"**{wv}**: {desc}")
-            
-    with tab3:
-        for gambit, desc in GAMBIT_DEFINITIONS.items():
-            st.markdown(f"**{gambit}**: {desc}")
-            meta = GAMBIT_METADATA.get(gambit)
-            if meta and meta.get("sub_tactics"):
-                tactic_names = ", ".join(t["token"] for t in meta["sub_tactics"])
-                st.caption(f"*Includes: {tactic_names}*")
-            
-    with tab4:
-        st.markdown("""
-        - **0–2 (Harmonic):** Needs are met; connection flows.
-        - **3–6 (Dissonant):** "Category Error." Misunderstandings, clinical coldness, or mild frustration.
-        - **7–10 (Combustive):** Conflict. Ego-clashes, abandonment, or betrayal of vulnerability.
-        """)
-
-# ---------------------------------------------------------------------------
-# Sidebar: Compact mode + footer
+# Sidebar: footer
 # ---------------------------------------------------------------------------
 with st.sidebar:
-    if st.button("📖 About & Glossary", use_container_width=True):
-        about_glossary_dialog()
-    st.divider()
-    st.checkbox("Compact mode", value=False, key="compact_mode")
-    st.divider()
     st.caption("Run: `streamlit run 1_Interaction_Simulator.py`")
 
 # ---------------------------------------------------------------------------
@@ -182,7 +133,7 @@ with col_meta_b:
 st.subheader("81 Friction Matrix")
 st.caption("Rows = A's Gambit, Columns = B's Response. Current pair highlighted.")
 
-compact = st.session_state.get("compact_mode", False)
+compact = st.checkbox("Compact view", value=False)
 fig = build_friction_matrix_figure(
     highlight_gambit_a=gambit_a,
     highlight_gambit_b=gambit_b,
